@@ -26,6 +26,16 @@ Sublime Text Portable Tool 是一个为 PC 下便携版的 Sublime Text 制作�
 
 更多说明可以到我的博客查看 [Sublime Text 2 便携版工具包](http://loo2k.com/blog/sublime-text-2-portable-version-tool/)
 
+## DEMO
+
+运行界面：
+
+![](images/st2tool.png?raw=true)
+
+右键菜单：
+
+![](images/st2menu.png?raw=true)
+
 ## License
 
 ( The MIT License )
