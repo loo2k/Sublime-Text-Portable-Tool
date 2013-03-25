@@ -1,0 +1,11 @@
+; 每行输入一个扩展名
+; 每行前面的分号为注释标记
+txt
+;html
+;htm
+css
+js
+php
+sql
+ini
+jade
