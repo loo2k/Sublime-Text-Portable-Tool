@@ -4,6 +4,8 @@ Sublime Text Portable Tool 是一个为 PC 下便携版的 Sublime Text 制作�
 
 ## 使用说明
 
+将 `Sublime-Text-Portable-Tool.bat` 和 `ext.txt` 两个文件复制到 Sublime Text 的文件夹中，并确保 Sublime Text 的可执行文件名称为 `sublime_text.exe` ，编辑好 `ext.txt` 后执行 `Sublime-Text-Portable-Tool.bat` 文件即可。 
+
 其中 **ext.txt** 文件中每行代表一个需要绑定的扩展名，如:
 
     txt
