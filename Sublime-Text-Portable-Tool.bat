@@ -28,7 +28,7 @@ If "%u%" == ""  Goto begin
 
 :regMenu
 reg add "HKCR\*\shell\Sublime Text 2" /ve /d "Open With Sublime Text 2" /f 
-reg add "HKCR\*\shell\Sublime Text 2\command" /ve /d "%cd%\sublime_text.exe %%1" /f 
+reg add "HKCR\*\shell\Sublime Text 2\command" /ve /d "%cd%\sublime_text.exe ""%%1""" /f 
 echo.
 echo 已成功注册右键菜单
 echo.
@@ -44,7 +44,7 @@ Goto begin
 :st2file
 reg add "HKCR\st2file" /ve /d "文本文档" /f
 reg add "HKCR\st2file\DefaultIcon" /ve /d "%cd%\sublime_text.exe" /f
-reg add "HKCR\st2file\shell\open\command" /ve /d "%cd%\sublime_text.exe %%1" /f
+reg add "HKCR\st2file\shell\open\command" /ve /d "%cd%\sublime_text.exe ""%%1""" /f
 For /F "eol=;" %%e in (ext.txt) Do (
         Rem echo %%e
         (for /f "skip=2 tokens=1,2,* delims= " %%a in ('reg query "HKCR\.%%e" /ve') do (
