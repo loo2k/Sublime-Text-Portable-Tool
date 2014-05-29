@@ -1,18 +1,18 @@
 ﻿@echo OFF
-title Sublime Text 2 便携版工具包
+title Sublime Text 便携版工具包
 echo.
-echo.               Sublime Text 2 便携版工具包 说  明 @LOO2K
+echo.               Sublime Text 便携版工具包 说  明 @LOO2K
 echo -----------------------------------------------------------------------
 echo   操作序号：
-echo   1: 添加 Sublime Text 2 到系统右键菜单;
-echo   2: 卸载 Sublime Text 2 右键菜单;
+echo   1: 添加 Sublime Text 到系统右键菜单;
+echo   2: 卸载 Sublime Text 右键菜单;
 echo   3: 注册扩展名; (扩展名列表请存放至同目录的 ext.txt 文件中)
 echo   4: 卸载扩展名：
 echo   5: 退出;
 echo.
 echo   注意事项：
-echo   1. 请将此脚本复制到 Sublime Text 2 的文件夹；
-echo   2. 确保 Sublime Text 2 的可执行文件名为 sublime_text.exe；
+echo   1. 请将此脚本复制到 Sublime Text 的文件夹；
+echo   2. 确保 Sublime Text 的可执行文件名为 sublime_text.exe；
 echo   3. 请将需要绑定的扩展名保存到同目录 ext.txt 文件中；（每行一个扩展名）
 echo.
 echo -----------------------------------------------------------------------
@@ -27,8 +27,8 @@ If "%u%" == "5" exit
 If "%u%" == ""  Goto begin
 
 :regMenu
-reg add "HKCR\*\shell\Sublime Text 2" /ve /d "Open With Sublime Text 2" /f 
-reg add "HKCR\*\shell\Sublime Text 2\command" /ve /d "%cd%\sublime_text.exe %%1" /f 
+reg add "HKCR\*\shell\Sublime Text 2" /ve /d "Open With Sublime Text" /f
+reg add "HKCR\*\shell\Sublime Text 2\command" /ve /d "%cd%\sublime_text.exe %%1" /f
 echo.
 echo 已成功注册右键菜单
 echo.
