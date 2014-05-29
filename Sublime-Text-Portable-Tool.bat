@@ -1,23 +1,23 @@
-ï»¿@echo OFF
-title Sublime Text ä¾¿æºç‰ˆå·¥å…·åŒ…
+@echo OFF
+title Sublime Text ±ãĞ¯°æ¹¤¾ß°ü
 echo.
-echo.               Sublime Text ä¾¿æºç‰ˆå·¥å…·åŒ… è¯´  æ˜ @LOO2K
+echo.               Sublime Text ±ãĞ¯°æ¹¤¾ß°ü Ëµ  Ã÷ @LOO2K
 echo -----------------------------------------------------------------------
-echo   æ“ä½œåºå·ï¼š
-echo   1: æ·»åŠ  Sublime Text åˆ°ç³»ç»Ÿå³é”®èœå•;
-echo   2: å¸è½½ Sublime Text å³é”®èœå•;
-echo   3: æ³¨å†Œæ‰©å±•å; (æ‰©å±•ååˆ—è¡¨è¯·å­˜æ”¾è‡³åŒç›®å½•çš„ ext.txt æ–‡ä»¶ä¸­)
-echo   4: å¸è½½æ‰©å±•åï¼š
-echo   5: é€€å‡º;
+echo   ²Ù×÷ĞòºÅ£º
+echo   1: Ìí¼Ó Sublime Text µ½ÏµÍ³ÓÒ¼ü²Ëµ¥;
+echo   2: Ğ¶ÔØ Sublime Text ÓÒ¼ü²Ëµ¥;
+echo   3: ×¢²áÀ©Õ¹Ãû; (À©Õ¹ÃûÁĞ±íÇë´æ·ÅÖÁÍ¬Ä¿Â¼µÄ ext.txt ÎÄ¼şÖĞ)
+echo   4: Ğ¶ÔØÀ©Õ¹Ãû£º
+echo   5: ÍË³ö;
 echo.
-echo   æ³¨æ„äº‹é¡¹ï¼š
-echo   1. è¯·å°†æ­¤è„šæœ¬å¤åˆ¶åˆ° Sublime Text çš„æ–‡ä»¶å¤¹ï¼›
-echo   2. ç¡®ä¿ Sublime Text çš„å¯æ‰§è¡Œæ–‡ä»¶åä¸º sublime_text.exeï¼›
-echo   3. è¯·å°†éœ€è¦ç»‘å®šçš„æ‰©å±•åä¿å­˜åˆ°åŒç›®å½• ext.txt æ–‡ä»¶ä¸­ï¼›ï¼ˆæ¯è¡Œä¸€ä¸ªæ‰©å±•åï¼‰
+echo   ×¢ÒâÊÂÏî£º
+echo   1. Çë½«´Ë½Å±¾¸´ÖÆµ½ Sublime Text µÄÎÄ¼ş¼Ğ£»
+echo   2. È·±£ Sublime Text µÄ¿ÉÖ´ĞĞÎÄ¼şÃûÎª sublime_text.exe£»
+echo   3. Çë½«ĞèÒª°ó¶¨µÄÀ©Õ¹Ãû±£´æµ½Í¬Ä¿Â¼ ext.txt ÎÄ¼şÖĞ£»£¨Ã¿ĞĞÒ»¸öÀ©Õ¹Ãû£©
 echo.
 echo -----------------------------------------------------------------------
 :begin
-Set /p u=è¾“å…¥æ“ä½œåºå·å¹¶æŒ‰ Enter é”®ï¼š
+Set /p u=ÊäÈë²Ù×÷ĞòºÅ²¢°´ Enter ¼ü£º
 
 If "%u%" == "1" Goto regMenu
 If "%u%" == "2" Goto unregMenu
@@ -30,19 +30,19 @@ If "%u%" == ""  Goto begin
 reg add "HKCR\*\shell\Sublime Text 2" /ve /d "Open With Sublime Text" /f
 reg add "HKCR\*\shell\Sublime Text 2\command" /ve /d "%cd%\sublime_text.exe %%1" /f
 echo.
-echo å·²æˆåŠŸæ³¨å†Œå³é”®èœå•
+echo ÒÑ³É¹¦×¢²áÓÒ¼ü²Ëµ¥
 echo.
 Goto begin
 
 :unregMenu
 reg delete "HKCR\*\shell\Sublime Text 2" /f
 echo.
-echo å·²æˆåŠŸå¸è½½å³é”®èœå•
+echo ÒÑ³É¹¦Ğ¶ÔØÓÒ¼ü²Ëµ¥
 echo.
 Goto begin
 
 :st2file
-reg add "HKCR\st2file" /ve /d "æ–‡æœ¬æ–‡æ¡£" /f
+reg add "HKCR\st2file" /ve /d "ÎÄ±¾ÎÄµµ" /f
 reg add "HKCR\st2file\DefaultIcon" /ve /d "%cd%\sublime_text.exe" /f
 reg add "HKCR\st2file\shell\open\command" /ve /d "%cd%\sublime_text.exe %%1" /f
 For /F "eol=;" %%e in (ext.txt) Do (
@@ -55,7 +55,7 @@ For /F "eol=;" %%e in (ext.txt) Do (
         assoc .%%e=st2file
     )
 echo.
-echo å·²æˆåŠŸæ³¨å†Œæ‰©å±•å
+echo ÒÑ³É¹¦×¢²áÀ©Õ¹Ãû
 echo.
 Goto begin
 
@@ -69,6 +69,6 @@ For /F "eol=;" %%e in (ext.txt) Do (
         ))
     )
 echo.
-echo å·²æˆåŠŸå¸è½½æ‰©å±•å
+echo ÒÑ³É¹¦Ğ¶ÔØÀ©Õ¹Ãû
 echo.
 Goto begin
