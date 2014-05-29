@@ -2,7 +2,7 @@
 
 Sublime Text Portable Tool 是一个为 PC 下便携版的 Sublime Text 制作的一个 **增加文件关联以及右键菜单** 的工具，这里提供源代码，如果你可以看懂代码的话，你也可以根据我提供的代码为其他的程序制作一个增加文件关联以及右键菜单的工具。
 
-目前测试为 Sublime Text 2/3 在 Windows 7 32 位系统下运行正常，由于现在用 Winddows 比较少，其他版本的操作系统没有做详细的测试。如果有问题麻烦在 issue 中反馈一下。
+目前测试为 Sublime Text 2/3 在 Windows 7 系统下运行正常（64位系统请使用管理员权限打开），由于现在用 Winddows 比较少，其他版本的操作系统没有做详细的测试。如果有问题麻烦在 issue 中反馈一下。
 
 ## 使用说明
 
@@ -25,8 +25,6 @@ Sublime Text Portable Tool 是一个为 PC 下便携版的 Sublime Text 制作�
     ;js
 
 进行绑定扩展名或者右键菜单打开 `Sublime-Text-Portable-Tool.bat` 按照说明操作即可；
-
-其中 `Sublime-Text-Portable-Tool.exe` 是使用 `Bat_To_Exe_Converter` 生成的；
 
 更多说明可以到我的博客查看 [Sublime Text 2 便携版工具包](http://loo2k.com/blog/sublime-text-2-portable-version-tool/)
 
